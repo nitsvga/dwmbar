@@ -10,6 +10,9 @@ get_weather()
 }
 
 
-if [ $(( 10#$(date '+%S') % 30 )) -eq 0 ]; then
+if [ $(( 30#$(date '+%S') % 30 )) -eq 0 ]; then
+    sleep 1s;
 	get_weather
 fi
+
+get_weather
